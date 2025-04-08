@@ -1,54 +1,10 @@
 /* 背景色の設定 */
 body {
+    margin-top: 40px;
     background-color: #eee8f3;
     font-family: 'Arial', sans-serif;
     margin-right: 20vw;
     margin-left: 20dvw;
-  }
-
-header {
-  background-color: #eee8f3;
-  color: #af94bf;
-  padding: 20px 40px;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1), -10px -10px 20px rgba(255, 255, 255, 0.7);
-  border-radius: 20px;
-  display: flex;
-  justify-content: space-between;
-  position: fixed;
-  top: 50px;
-  left: 50px;
-  align-items: center;
-  font-size: 18px;
-}
-
-header a {
-  color: #333;
-  text-decoration: none;
-  padding: 10px 15px;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  box-shadow: inset 5px 5px 10px rgba(255, 255, 255, 0.4), inset -5px -5px 10px rgba(0, 0, 0, 0.1);
-}
-  
-  /* Neumorphism ボタンスタイル */
-  button {
-    background: #eee8f3;
-    border-radius: 12px;
-    box-shadow: 8px 8px 15px #b984c8, -8px -8px 15px #57bdcf;
-    border: none;
-    color: #af94bf;
-    padding: 20px 40px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  button:hover {
-    box-shadow: 4px 4px 8px #b984c8, -4px -4px 8px #57bdcf;
-  }
-  
-  button:active {
-    box-shadow: inset 4px 4px 8px #b984c8, inset -4px -4px 8px #57bdcf;
   }
   
   #card {

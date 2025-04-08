@@ -1,10 +1,10 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-//import './Threads.css'
-import TestThreads from './Threads.tsx'
+//import './App.css'
+import App from './App';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <TestThreads />
+    <App />
   </StrictMode>,
 )

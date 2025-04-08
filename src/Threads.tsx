@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import Header from './Header';
+import './Threads.css';
 
 interface Thread {
   id: number;
@@ -45,6 +47,12 @@ const TestThreads = () => {
     }
   }
 
+  const loadBeforeThreads = () => {
+    if (offset >= 10) {
+      setOffset((prevOffset) => prevOffset - 10);
+    }
+  }
+
   if (loading && offset === 0) {
     return <div>Loading...</div>;
   }
@@ -55,9 +63,7 @@ const TestThreads = () => {
 
   return (
     <div>
-      <header>
-        <h1>スレッド一覧</h1>
-      </header>
+      <Header title='スレッド一覧' />
       <div id='card'>
         {threads.map((thread) => (
           <div id='card' key={thread.id}>
@@ -66,6 +72,11 @@ const TestThreads = () => {
           </div>
         ))}
       </div>
+      {offset >= 10 && (
+        <button onClick={loadBeforeThreads} disabled={loading}>
+          {loading ? 'Loading more...' : 'Before 10 Threads'}
+        </button>
+      )}
       {hasMore && (
         <button onClick={loadMoreThreads} disabled={loading}>
           {loading ? 'Loading more...' : 'Next 10 Threads'}
